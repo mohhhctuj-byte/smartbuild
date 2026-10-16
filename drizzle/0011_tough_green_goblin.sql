@@ -1,0 +1,1 @@
+ALTER TABLE `authRateLimits` MODIFY COLUMN `action` enum('signup','verify_email','resend_verification','login','forgot_password','reset_password','smtp_send') NOT NULL;

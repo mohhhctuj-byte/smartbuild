@@ -1,0 +1,33 @@
+# SmartBuild Python runtime baseline
+# Core web and API stack
+fastapi>=0.115.0
+starlette>=0.37.2
+pydantic>=2.9.2
+uvicorn[standard]>=0.30.0
+httpx>=0.27.0
+
+# Persistence and async job scheduling
+sqlalchemy>=2.0.35
+sqlmodel>=0.0.18
+alembic>=1.13.3
+redis>=5.0.0
+celery>=5.4.0
+rq>=1.16.2
+apscheduler>=3.10.4
+
+# Data and analytics foundations
+numpy>=2.1.1
+pandas>=2.2.3
+polars>=1.8.0
+scikit-learn>=1.4.2
+matplotlib>=3.8.4
+plotly>=5.17.0
+
+# Optional ML / AI dependencies
+# PyTorch is intentionally kept out of the default install because it is very large
+# and not required for the SmartBuild web runtime itself. Install it separately when
+# the project specifically needs local model training or inference.
+# torch>=2.5.0
+
+# Notebook / developer tooling
+jupyter>=1.1.1

@@ -1,0 +1,2 @@
+ALTER TABLE `buildRunAgentTasks` ADD `executionOrder` int NOT NULL;--> statement-breakpoint
+ALTER TABLE `buildRunAgentTasks` ADD CONSTRAINT `buildRunAgentTasks_run_order_unique` UNIQUE(`buildRunId`,`executionOrder`);

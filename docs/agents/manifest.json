@@ -1,0 +1,1380 @@
+{
+  "accessibility_expert": {
+    "blocked_code": "BLOCKED_ACCESSIBILITY_EXPERT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "audits and improves WCAG and keyboard access",
+    "example": "For a Veyra website request, Accessibility Expert uses workspace.read to audits and improves WCAG and keyboard access for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Accessibility Expert",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate accessibility_expert evidence against the assigned paths and confirm the result addresses: audits and improves WCAG and keyboard access."
+  },
+  "analytics_specialist": {
+    "blocked_code": "BLOCKED_ANALYTICS_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates privacy-aware analytics",
+    "example": "For a Veyra website request, Analytics Specialist uses workspace.read to integrates privacy-aware analytics for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Analytics Specialist",
+    "permissions": [
+      "read-workspace",
+      "policy-check"
+    ],
+    "team": "governance",
+    "tools": [
+      "workspace.read",
+      "policy.check"
+    ],
+    "validation": "Validate analytics_specialist evidence against the assigned paths and confirm the result addresses: integrates privacy-aware analytics."
+  },
+  "animation_css_master": {
+    "blocked_code": "BLOCKED_ANIMATION_CSS_MASTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "implements polished CSS and motion systems",
+    "example": "For a Veyra website request, Animation & CSS Master uses workspace.read to implements polished CSS and motion systems for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Animation & CSS Master",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate animation_css_master evidence against the assigned paths and confirm the result addresses: implements polished CSS and motion systems."
+  },
+  "api_designer": {
+    "blocked_code": "BLOCKED_API_DESIGNER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates REST or GraphQL contracts",
+    "example": "For a Veyra website request, API Designer uses workspace.read to creates REST or GraphQL contracts for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "API Designer",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate api_designer evidence against the assigned paths and confirm the result addresses: creates REST or GraphQL contracts."
+  },
+  "api_key_request": {
+    "blocked_code": "BLOCKED_API_KEY_REQUEST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "detects required APIs and requests missing configuration",
+    "example": "For a Veyra website request, API Key Request Agent uses workspace.read to detects required APIs and requests missing configuration for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "API Key Request Agent",
+    "permissions": [
+      "read-workspace",
+      "policy-check"
+    ],
+    "team": "governance",
+    "tools": [
+      "workspace.read",
+      "policy.check"
+    ],
+    "validation": "Validate api_key_request evidence against the assigned paths and confirm the result addresses: detects required APIs and requests missing configuration."
+  },
+  "api_regression_tester": {
+    "blocked_code": "BLOCKED_API_REGRESSION_TESTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "checks existing API behavior after changes",
+    "example": "For a Veyra website request, API Regression Tester uses workspace.read to checks existing API behavior after changes for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "API Regression Tester",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate api_regression_tester evidence against the assigned paths and confirm the result addresses: checks existing API behavior after changes."
+  },
+  "asset_icon_finder": {
+    "blocked_code": "BLOCKED_ASSET_ICON_FINDER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "finds assets with license metadata",
+    "example": "For a Veyra website request, Asset & Icon Finder uses web.search to finds assets with license metadata for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Asset & Icon Finder",
+    "permissions": [
+      "web-search",
+      "source-read"
+    ],
+    "team": "research",
+    "tools": [
+      "web.search",
+      "source.read"
+    ],
+    "validation": "Validate asset_icon_finder evidence against the assigned paths and confirm the result addresses: finds assets with license metadata."
+  },
+  "auth_permissions_agent": {
+    "blocked_code": "BLOCKED_AUTH_PERMISSIONS_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "implements real authentication and authorization",
+    "example": "For a Veyra website request, Auth & Permissions Agent uses workspace.read to implements real authentication and authorization for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Auth & Permissions Agent",
+    "permissions": [
+      "read-workspace",
+      "security-scan"
+    ],
+    "team": "security",
+    "tools": [
+      "workspace.read",
+      "security.scan"
+    ],
+    "validation": "Validate auth_permissions_agent evidence against the assigned paths and confirm the result addresses: implements real authentication and authorization."
+  },
+  "auto_google_operator": {
+    "blocked_code": "BLOCKED_AUTO_GOOGLE_OPERATOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "performs authorized searches and extracts documentation",
+    "example": "For a Veyra website request, Auto-Google Operator uses web.search to performs authorized searches and extracts documentation for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Auto-Google Operator",
+    "permissions": [
+      "web-search",
+      "source-read"
+    ],
+    "team": "research",
+    "tools": [
+      "web.search",
+      "source.read"
+    ],
+    "validation": "Validate auto_google_operator evidence against the assigned paths and confirm the result addresses: performs authorized searches and extracts documentation."
+  },
+  "background_jobs_agent": {
+    "blocked_code": "BLOCKED_BACKGROUND_JOBS_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "implements approved background work",
+    "example": "For a Veyra website request, Background Jobs Agent uses workspace.read to implements approved background work for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Background Jobs Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate background_jobs_agent evidence against the assigned paths and confirm the result addresses: implements approved background work."
+  },
+  "browser_automation_agent": {
+    "blocked_code": "BLOCKED_BROWSER_AUTOMATION_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "uses Playwright to operate and test browsers",
+    "example": "For a Veyra website request, Browser Automation Agent uses workspace.read to uses Playwright to operate and test browsers for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Browser Automation Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate browser_automation_agent evidence against the assigned paths and confirm the result addresses: uses Playwright to operate and test browsers."
+  },
+  "caching_specialist": {
+    "blocked_code": "BLOCKED_CACHING_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "adds appropriate caching only when required",
+    "example": "For a Veyra website request, Caching Specialist uses workspace.read to adds appropriate caching only when required for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Caching Specialist",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate caching_specialist evidence against the assigned paths and confirm the result addresses: adds appropriate caching only when required."
+  },
+  "changelog_agent": {
+    "blocked_code": "BLOCKED_CHANGELOG_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "generates release notes from verified changes",
+    "example": "For a Veyra website request, Changelog Agent uses workspace.read to generates release notes from verified changes for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Changelog Agent",
+    "permissions": [
+      "read-workspace",
+      "workspace-write"
+    ],
+    "team": "documentation",
+    "tools": [
+      "workspace.read",
+      "workspace.write"
+    ],
+    "validation": "Validate changelog_agent evidence against the assigned paths and confirm the result addresses: generates release notes from verified changes."
+  },
+  "ci_cd_pipeline_agent": {
+    "blocked_code": "BLOCKED_CI_CD_PIPELINE_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates and validates CI workflows",
+    "example": "For a Veyra website request, CI/CD Pipeline Agent uses workspace.read to creates and validates CI workflows for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "CI/CD Pipeline Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate ci_cd_pipeline_agent evidence against the assigned paths and confirm the result addresses: creates and validates CI workflows."
+  },
+  "cloud_infra_specialist": {
+    "blocked_code": "BLOCKED_CLOUD_INFRA_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates deployment architecture without deploying",
+    "example": "For a Veyra website request, Cloud Infra Specialist uses workspace.read to creates deployment architecture without deploying for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Cloud Infra Specialist",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate cloud_infra_specialist evidence against the assigned paths and confirm the result addresses: creates deployment architecture without deploying."
+  },
+  "code_smells_inspector": {
+    "blocked_code": "BLOCKED_CODE_SMELLS_INSPECTOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "reviews maintainability and complexity",
+    "example": "For a Veyra website request, Code Smells Inspector uses workspace.read to reviews maintainability and complexity for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Code Smells Inspector",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate code_smells_inspector evidence against the assigned paths and confirm the result addresses: reviews maintainability and complexity."
+  },
+  "color_palette_scout": {
+    "blocked_code": "BLOCKED_COLOR_PALETTE_SCOUT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "proposes accessible color palettes",
+    "example": "For a Veyra website request, Color Palette Scout uses workspace.read to proposes accessible color palettes for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Color Palette Scout",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate color_palette_scout evidence against the assigned paths and confirm the result addresses: proposes accessible color palettes."
+  },
+  "competitor_ui_scraper": {
+    "blocked_code": "BLOCKED_COMPETITOR_UI_SCRAPER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "analyzes authorized competitor interfaces",
+    "example": "For a Veyra website request, Competitor UI Scraper uses web.search to analyzes authorized competitor interfaces for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Competitor UI Scraper",
+    "permissions": [
+      "web-search",
+      "source-read",
+      "explicit-approval"
+    ],
+    "team": "research",
+    "tools": [
+      "web.search",
+      "source.read"
+    ],
+    "validation": "Validate competitor_ui_scraper evidence against the assigned paths and confirm the result addresses: analyzes authorized competitor interfaces."
+  },
+  "component_library_manager": {
+    "blocked_code": "BLOCKED_COMPONENT_LIBRARY_MANAGER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates reusable UI components",
+    "example": "For a Veyra website request, Component Library Manager uses workspace.read to creates reusable UI components for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Component Library Manager",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate component_library_manager evidence against the assigned paths and confirm the result addresses: creates reusable UI components."
+  },
+  "cost_token_optimizer": {
+    "blocked_code": "BLOCKED_COST_TOKEN_OPTIMIZER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "reduces model, API, compute, and storage costs",
+    "example": "For a Veyra website request, Cost & Token Optimizer uses workspace.read to reduces model, API, compute, and storage costs for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Cost & Token Optimizer",
+    "permissions": [
+      "read-workspace",
+      "policy-check"
+    ],
+    "team": "governance",
+    "tools": [
+      "workspace.read",
+      "policy.check"
+    ],
+    "validation": "Validate cost_token_optimizer evidence against the assigned paths and confirm the result addresses: reduces model, API, compute, and storage costs."
+  },
+  "db_schema_specialist": {
+    "blocked_code": "BLOCKED_DB_SCHEMA_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "designs tables, relationships, indexes, and migrations",
+    "example": "For a Veyra website request, DB Schema Specialist uses workspace.read to designs tables, relationships, indexes, and migrations for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "DB Schema Specialist",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate db_schema_specialist evidence against the assigned paths and confirm the result addresses: designs tables, relationships, indexes, and migrations."
+  },
+  "dependency_auditor": {
+    "blocked_code": "BLOCKED_DEPENDENCY_AUDITOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "scans licenses, vulnerabilities, and outdated packages",
+    "example": "For a Veyra website request, Dependency Auditor uses workspace.read to scans licenses, vulnerabilities, and outdated packages for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Dependency Auditor",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate dependency_auditor evidence against the assigned paths and confirm the result addresses: scans licenses, vulnerabilities, and outdated packages."
+  },
+  "dns_ssl_agent": {
+    "blocked_code": "BLOCKED_DNS_SSL_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "prepares domain, DNS, HTTPS, and certificate configuration",
+    "example": "For a Veyra website request, DNS & SSL Agent uses workspace.read to prepares domain, DNS, HTTPS, and certificate configuration for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "DNS & SSL Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate dns_ssl_agent evidence against the assigned paths and confirm the result addresses: prepares domain, DNS, HTTPS, and certificate configuration."
+  },
+  "docker_master": {
+    "blocked_code": "BLOCKED_DOCKER_MASTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates secure Docker configuration when needed",
+    "example": "For a Veyra website request, Docker Master uses workspace.read to creates secure Docker configuration when needed for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Docker Master",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate docker_master evidence against the assigned paths and confirm the result addresses: creates secure Docker configuration when needed."
+  },
+  "dom_inspector_scraper": {
+    "blocked_code": "BLOCKED_DOM_INSPECTOR_SCRAPER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "inspects authorized HTML and DOM structures",
+    "example": "For a Veyra website request, DOM Inspector & Scraper uses workspace.read to inspects authorized HTML and DOM structures for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "DOM Inspector & Scraper",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test",
+      "explicit-approval"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate dom_inspector_scraper evidence against the assigned paths and confirm the result addresses: inspects authorized HTML and DOM structures."
+  },
+  "dynamic_data_connector": {
+    "blocked_code": "BLOCKED_DYNAMIC_DATA_CONNECTOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "replaces mock data with real database or API connections",
+    "example": "For a Veyra website request, Dynamic Data Connector uses workspace.read to replaces mock data with real database or API connections for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Dynamic Data Connector",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate dynamic_data_connector evidence against the assigned paths and confirm the result addresses: replaces mock data with real database or API connections."
+  },
+  "e2e_test_agent": {
+    "blocked_code": "BLOCKED_E2E_TEST_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "writes and runs real browser tests",
+    "example": "For a Veyra website request, E2E Test Agent uses workspace.read to writes and runs real browser tests for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "E2E Test Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate e2e_test_agent evidence against the assigned paths and confirm the result addresses: writes and runs real browser tests."
+  },
+  "e2e_user_simulator": {
+    "blocked_code": "BLOCKED_E2E_USER_SIMULATOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "simulates visitors and reports broken flows",
+    "example": "For a Veyra website request, E2E User Simulator uses workspace.read to simulates visitors and reports broken flows for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "E2E User Simulator",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate e2e_user_simulator evidence against the assigned paths and confirm the result addresses: simulates visitors and reports broken flows."
+  },
+  "edge_case_finder": {
+    "blocked_code": "BLOCKED_EDGE_CASE_FINDER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "identifies unexpected inputs and failure paths",
+    "example": "For a Veyra website request, Edge Case Finder uses workspace.read to identifies unexpected inputs and failure paths for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Edge Case Finder",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate edge_case_finder evidence against the assigned paths and confirm the result addresses: identifies unexpected inputs and failure paths."
+  },
+  "email_notification_specialist": {
+    "blocked_code": "BLOCKED_EMAIL_NOTIFICATION_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates configured notification providers",
+    "example": "For a Veyra website request, Email & Notification Specialist uses workspace.read to integrates configured notification providers for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Email & Notification Specialist",
+    "permissions": [
+      "read-workspace",
+      "network-request"
+    ],
+    "team": "integrations",
+    "tools": [
+      "workspace.read",
+      "network.request"
+    ],
+    "validation": "Validate email_notification_specialist evidence against the assigned paths and confirm the result addresses: integrates configured notification providers."
+  },
+  "etl_pipeline_agent": {
+    "blocked_code": "BLOCKED_ETL_PIPELINE_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "cleans, transforms, validates, and loads data",
+    "example": "For a Veyra website request, ETL Pipeline Agent uses workspace.read to cleans, transforms, validates, and loads data for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "ETL Pipeline Agent",
+    "permissions": [
+      "read-workspace",
+      "database-inspect"
+    ],
+    "team": "data",
+    "tools": [
+      "workspace.read",
+      "database.inspect"
+    ],
+    "validation": "Validate etl_pipeline_agent evidence against the assigned paths and confirm the result addresses: cleans, transforms, validates, and loads data."
+  },
+  "event_driven_specialist": {
+    "blocked_code": "BLOCKED_EVENT_DRIVEN_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "designs events, webhooks, queues, and realtime messaging",
+    "example": "For a Veyra website request, Event-Driven Specialist uses workspace.read to designs events, webhooks, queues, and realtime messaging for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Event-Driven Specialist",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate event_driven_specialist evidence against the assigned paths and confirm the result addresses: designs events, webhooks, queues, and realtime messaging."
+  },
+  "form_validation_master": {
+    "blocked_code": "BLOCKED_FORM_VALIDATION_MASTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "creates validation, error handling, and feedback",
+    "example": "For a Veyra website request, Form & Validation Master uses workspace.read to creates validation, error handling, and feedback for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Form & Validation Master",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate form_validation_master evidence against the assigned paths and confirm the result addresses: creates validation, error handling, and feedback."
+  },
+  "functional_component_engineer": {
+    "blocked_code": "BLOCKED_FUNCTIONAL_COMPONENT_ENGINEER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "ensures controls have real events and backend behavior",
+    "example": "For a Veyra website request, Functional Component Engineer uses workspace.read to ensures controls have real events and backend behavior for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Functional Component Engineer",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate functional_component_engineer evidence against the assigned paths and confirm the result addresses: ensures controls have real events and backend behavior."
+  },
+  "google_design_trends_searcher": {
+    "blocked_code": "BLOCKED_GOOGLE_DESIGN_TRENDS_SEARCHER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "researches current design references from authorized sources",
+    "example": "For a Veyra website request, Google Design Trends Searcher uses web.search to researches current design references from authorized sources for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Google Design Trends Searcher",
+    "permissions": [
+      "web-search",
+      "source-read"
+    ],
+    "team": "research",
+    "tools": [
+      "web.search",
+      "source.read"
+    ],
+    "validation": "Validate google_design_trends_searcher evidence against the assigned paths and confirm the result addresses: researches current design references from authorized sources."
+  },
+  "gui_mouse_navigator": {
+    "blocked_code": "BLOCKED_GUI_MOUSE_NAVIGATOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "uses only an explicit safe desktop automation layer",
+    "example": "For a Veyra website request, GUI & Mouse Navigator uses desktop.bound-folder to uses only an explicit safe desktop automation layer for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "GUI & Mouse Navigator",
+    "permissions": [
+      "desktop-bound-folder",
+      "explicit-approval"
+    ],
+    "team": "desktop",
+    "tools": [
+      "desktop.bound-folder"
+    ],
+    "validation": "Validate gui_mouse_navigator evidence against the assigned paths and confirm the result addresses: uses only an explicit safe desktop automation layer."
+  },
+  "infrastructure_as_code_agent": {
+    "blocked_code": "BLOCKED_INFRASTRUCTURE_AS_CODE_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "generates infrastructure code for review",
+    "example": "For a Veyra website request, Infrastructure as Code Agent uses workspace.read to generates infrastructure code for review for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Infrastructure as Code Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate infrastructure_as_code_agent evidence against the assigned paths and confirm the result addresses: generates infrastructure code for review."
+  },
+  "intent_verifier": {
+    "blocked_code": "BLOCKED_INTENT_VERIFIER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "verifies that the requested outcome is clear and achievable",
+    "example": "For a Veyra website request, Intent Verifier Agent uses workspace.read to verifies that the requested outcome is clear and achievable for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Intent Verifier Agent",
+    "permissions": [
+      "read-workspace"
+    ],
+    "team": "planning",
+    "tools": [
+      "workspace.read"
+    ],
+    "validation": "Validate intent_verifier evidence against the assigned paths and confirm the result addresses: verifies that the requested outcome is clear and achievable."
+  },
+  "interactive_animation_specialist": {
+    "blocked_code": "BLOCKED_INTERACTIVE_ANIMATION_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "connects animation to real interactions",
+    "example": "For a Veyra website request, Interactive Animation Specialist uses workspace.read to connects animation to real interactions for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Interactive Animation Specialist",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate interactive_animation_specialist evidence against the assigned paths and confirm the result addresses: connects animation to real interactions."
+  },
+  "internationalization_agent": {
+    "blocked_code": "BLOCKED_INTERNATIONALIZATION_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "adds translation architecture and locale support",
+    "example": "For a Veyra website request, Internationalization Agent uses workspace.read to adds translation architecture and locale support for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Internationalization Agent",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate internationalization_agent evidence against the assigned paths and confirm the result addresses: adds translation architecture and locale support."
+  },
+  "kubernetes_agent": {
+    "blocked_code": "BLOCKED_KUBERNETES_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "generates manifests and scaling plans without deploying",
+    "example": "For a Veyra website request, Kubernetes Agent uses workspace.read to generates manifests and scaling plans without deploying for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Kubernetes Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate kubernetes_agent evidence against the assigned paths and confirm the result addresses: generates manifests and scaling plans without deploying."
+  },
+  "legacy_refactoring_agent": {
+    "blocked_code": "BLOCKED_LEGACY_REFACTORING_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "refactors while preserving behavior",
+    "example": "For a Veyra website request, Legacy Refactoring Agent uses workspace.read to refactors while preserving behavior for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Legacy Refactoring Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate legacy_refactoring_agent evidence against the assigned paths and confirm the result addresses: refactors while preserving behavior."
+  },
+  "live_feedback_collector": {
+    "blocked_code": "BLOCKED_LIVE_FEEDBACK_COLLECTOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "requests feedback after major milestones",
+    "example": "For a Veyra website request, Live Feedback Collector uses workspace.read to requests feedback after major milestones for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Live Feedback Collector",
+    "permissions": [
+      "read-workspace"
+    ],
+    "team": "planning",
+    "tools": [
+      "workspace.read"
+    ],
+    "validation": "Validate live_feedback_collector evidence against the assigned paths and confirm the result addresses: requests feedback after major milestones."
+  },
+  "load_tester": {
+    "blocked_code": "BLOCKED_LOAD_TESTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "designs controlled load tests with explicit limits",
+    "example": "For a Veyra website request, Load Tester uses workspace.read to designs controlled load tests with explicit limits for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Load Tester",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate load_tester evidence against the assigned paths and confirm the result addresses: designs controlled load tests with explicit limits."
+  },
+  "microservices_architect": {
+    "blocked_code": "BLOCKED_MICROSERVICES_ARCHITECT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "plans service boundaries when needed",
+    "example": "For a Veyra website request, Microservices Architect uses workspace.read to plans service boundaries when needed for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Microservices Architect",
+    "permissions": [
+      "read-workspace"
+    ],
+    "team": "architecture",
+    "tools": [
+      "workspace.read"
+    ],
+    "validation": "Validate microservices_architect evidence against the assigned paths and confirm the result addresses: plans service boundaries when needed."
+  },
+  "model_fine_tuner": {
+    "blocked_code": "BLOCKED_MODEL_FINE_TUNER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "prepares fine-tuning data without starting costly training",
+    "example": "For a Veyra website request, Model Fine-Tuner uses workspace.read to prepares fine-tuning data without starting costly training for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Model Fine-Tuner",
+    "permissions": [
+      "read-workspace",
+      "prompt-inspect",
+      "explicit-approval"
+    ],
+    "team": "ai",
+    "tools": [
+      "workspace.read",
+      "prompt.inspect"
+    ],
+    "validation": "Validate model_fine_tuner evidence against the assigned paths and confirm the result addresses: prepares fine-tuning data without starting costly training."
+  },
+  "monitoring_agent": {
+    "blocked_code": "BLOCKED_MONITORING_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates configured health monitoring",
+    "example": "For a Veyra website request, Monitoring Agent uses workspace.read to integrates configured health monitoring for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Monitoring Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate monitoring_agent evidence against the assigned paths and confirm the result addresses: integrates configured health monitoring."
+  },
+  "mutation_tester": {
+    "blocked_code": "BLOCKED_MUTATION_TESTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "evaluates whether tests detect deliberate defects",
+    "example": "For a Veyra website request, Mutation Tester uses workspace.read to evaluates whether tests detect deliberate defects for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Mutation Tester",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate mutation_tester evidence against the assigned paths and confirm the result addresses: evaluates whether tests detect deliberate defects."
+  },
+  "no_fake_assurer": {
+    "blocked_code": "BLOCKED_NO_FAKE_ASSURER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "rejects visual-only or fabricated features",
+    "example": "For a Veyra website request, No-Fake Assurer uses workspace.read to rejects visual-only or fabricated features for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "No-Fake Assurer",
+    "permissions": [
+      "read-workspace",
+      "policy-check"
+    ],
+    "team": "governance",
+    "tools": [
+      "workspace.read",
+      "policy.check"
+    ],
+    "validation": "Validate no_fake_assurer evidence against the assigned paths and confirm the result addresses: rejects visual-only or fabricated features."
+  },
+  "payment_gateway_agent": {
+    "blocked_code": "BLOCKED_PAYMENT_GATEWAY_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates approved payment providers securely",
+    "example": "For a Veyra website request, Payment Gateway Agent uses workspace.read to integrates approved payment providers securely for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Payment Gateway Agent",
+    "permissions": [
+      "read-workspace",
+      "network-request",
+      "explicit-approval"
+    ],
+    "team": "integrations",
+    "tools": [
+      "workspace.read",
+      "network.request"
+    ],
+    "validation": "Validate payment_gateway_agent evidence against the assigned paths and confirm the result addresses: integrates approved payment providers securely."
+  },
+  "penetration_tester": {
+    "blocked_code": "BLOCKED_PENETRATION_TESTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "checks authorized common security issues",
+    "example": "For a Veyra website request, Penetration Tester uses workspace.read to checks authorized common security issues for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Penetration Tester",
+    "permissions": [
+      "read-workspace",
+      "security-scan"
+    ],
+    "team": "security",
+    "tools": [
+      "workspace.read",
+      "security.scan"
+    ],
+    "validation": "Validate penetration_tester evidence against the assigned paths and confirm the result addresses: checks authorized common security issues."
+  },
+  "performance_architect": {
+    "blocked_code": "BLOCKED_PERFORMANCE_ARCHITECT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "plans latency, throughput, caching, and scaling",
+    "example": "For a Veyra website request, Performance Architect uses workspace.read to plans latency, throughput, caching, and scaling for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Performance Architect",
+    "permissions": [
+      "read-workspace"
+    ],
+    "team": "architecture",
+    "tools": [
+      "workspace.read"
+    ],
+    "validation": "Validate performance_architect evidence against the assigned paths and confirm the result addresses: plans latency, throughput, caching, and scaling."
+  },
+  "privacy_inspector": {
+    "blocked_code": "BLOCKED_PRIVACY_INSPECTOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "checks privacy, retention, consent, and GDPR requirements",
+    "example": "For a Veyra website request, Privacy Inspector uses workspace.read to checks privacy, retention, consent, and GDPR requirements for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Privacy Inspector",
+    "permissions": [
+      "read-workspace",
+      "policy-check"
+    ],
+    "team": "governance",
+    "tools": [
+      "workspace.read",
+      "policy.check"
+    ],
+    "validation": "Validate privacy_inspector evidence against the assigned paths and confirm the result addresses: checks privacy, retention, consent, and GDPR requirements."
+  },
+  "prompt_engineer": {
+    "blocked_code": "BLOCKED_PROMPT_ENGINEER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "improves prompts, tool descriptions, and evaluation cases",
+    "example": "For a Veyra website request, Prompt Engineer uses workspace.read to improves prompts, tool descriptions, and evaluation cases for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Prompt Engineer",
+    "permissions": [
+      "read-workspace",
+      "prompt-inspect"
+    ],
+    "team": "ai",
+    "tools": [
+      "workspace.read",
+      "prompt.inspect"
+    ],
+    "validation": "Validate prompt_engineer evidence against the assigned paths and confirm the result addresses: improves prompts, tool descriptions, and evaluation cases."
+  },
+  "query_optimizer": {
+    "blocked_code": "BLOCKED_QUERY_OPTIMIZER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "improves database queries and ORM usage",
+    "example": "For a Veyra website request, Query Optimizer uses workspace.read to improves database queries and ORM usage for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Query Optimizer",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate query_optimizer evidence against the assigned paths and confirm the result addresses: improves database queries and ORM usage."
+  },
+  "responsive_designer": {
+    "blocked_code": "BLOCKED_RESPONSIVE_DESIGNER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "verifies desktop, tablet, and mobile layouts",
+    "example": "For a Veyra website request, Responsive Designer uses workspace.read to verifies desktop, tablet, and mobile layouts for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Responsive Designer",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate responsive_designer evidence against the assigned paths and confirm the result addresses: verifies desktop, tablet, and mobile layouts."
+  },
+  "scraper_agent": {
+    "blocked_code": "BLOCKED_SCRAPER_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "collects only authorized data with limits",
+    "example": "For a Veyra website request, Scraper Agent uses web.search to collects only authorized data with limits for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Scraper Agent",
+    "permissions": [
+      "web-search",
+      "source-read",
+      "explicit-approval"
+    ],
+    "team": "research",
+    "tools": [
+      "web.search",
+      "source.read"
+    ],
+    "validation": "Validate scraper_agent evidence against the assigned paths and confirm the result addresses: collects only authorized data with limits."
+  },
+  "search_index_agent": {
+    "blocked_code": "BLOCKED_SEARCH_INDEX_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates a search index only when required",
+    "example": "For a Veyra website request, Search Index Agent uses workspace.read to integrates a search index only when required for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Search Index Agent",
+    "permissions": [
+      "read-workspace",
+      "database-inspect"
+    ],
+    "team": "data",
+    "tools": [
+      "workspace.read",
+      "database.inspect"
+    ],
+    "validation": "Validate search_index_agent evidence against the assigned paths and confirm the result addresses: integrates a search index only when required."
+  },
+  "security_architect": {
+    "blocked_code": "BLOCKED_SECURITY_ARCHITECT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "designs authentication, authorization, encryption, and secret handling",
+    "example": "For a Veyra website request, Security Architect uses workspace.read to designs authentication, authorization, encryption, and secret handling for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Security Architect",
+    "permissions": [
+      "read-workspace",
+      "security-scan"
+    ],
+    "team": "security",
+    "tools": [
+      "workspace.read",
+      "security.scan"
+    ],
+    "validation": "Validate security_architect evidence against the assigned paths and confirm the result addresses: designs authentication, authorization, encryption, and secret handling."
+  },
+  "seo_specialist": {
+    "blocked_code": "BLOCKED_SEO_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "implements metadata, structured data, and SEO checks",
+    "example": "For a Veyra website request, SEO Specialist uses workspace.read to implements metadata, structured data, and SEO checks for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "SEO Specialist",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate seo_specialist evidence against the assigned paths and confirm the result addresses: implements metadata, structured data, and SEO checks."
+  },
+  "state_management_agent": {
+    "blocked_code": "BLOCKED_STATE_MANAGEMENT_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "manages application state using the project library",
+    "example": "For a Veyra website request, State Management Agent uses workspace.read to manages application state using the project library for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "State Management Agent",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "browser-preview"
+    ],
+    "team": "frontend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "browser.preview"
+    ],
+    "validation": "Validate state_management_agent evidence against the assigned paths and confirm the result addresses: manages application state using the project library."
+  },
+  "system_environment_installer": {
+    "blocked_code": "BLOCKED_SYSTEM_ENVIRONMENT_INSTALLER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "checks dependencies and installs only with approval",
+    "example": "For a Veyra website request, System Environment Installer uses workspace.read to checks dependencies and installs only with approval for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "System Environment Installer",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "explicit-approval"
+    ],
+    "team": "operations",
+    "tools": [
+      "workspace.read",
+      "terminal.check"
+    ],
+    "validation": "Validate system_environment_installer evidence against the assigned paths and confirm the result addresses: checks dependencies and installs only with approval."
+  },
+  "tech_spec_writer": {
+    "blocked_code": "BLOCKED_TECH_SPEC_WRITER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "generates technical API documentation",
+    "example": "For a Veyra website request, Tech Spec Writer uses workspace.read to generates technical API documentation for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Tech Spec Writer",
+    "permissions": [
+      "read-workspace",
+      "workspace-write"
+    ],
+    "team": "documentation",
+    "tools": [
+      "workspace.read",
+      "workspace.write"
+    ],
+    "validation": "Validate tech_spec_writer evidence against the assigned paths and confirm the result addresses: generates technical API documentation."
+  },
+  "terminal_tester": {
+    "blocked_code": "BLOCKED_TERMINAL_TESTER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "runs local health checks and verifies startup",
+    "example": "For a Veyra website request, Terminal Tester uses workspace.read to runs local health checks and verifies startup for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Terminal Tester",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate terminal_tester evidence against the assigned paths and confirm the result addresses: runs local health checks and verifies startup."
+  },
+  "third_party_integrator": {
+    "blocked_code": "BLOCKED_THIRD_PARTY_INTEGRATOR_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "connects external APIs with retries and validation",
+    "example": "For a Veyra website request, Third-Party Integrator uses workspace.read to connects external APIs with retries and validation for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Third-Party Integrator",
+    "permissions": [
+      "read-workspace",
+      "network-request"
+    ],
+    "team": "integrations",
+    "tools": [
+      "workspace.read",
+      "network.request"
+    ],
+    "validation": "Validate third_party_integrator evidence against the assigned paths and confirm the result addresses: connects external APIs with retries and validation."
+  },
+  "unit_test_specialist": {
+    "blocked_code": "BLOCKED_UNIT_TEST_SPECIALIST_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "writes meaningful unit tests",
+    "example": "For a Veyra website request, Unit Test Specialist uses workspace.read to writes meaningful unit tests for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Unit Test Specialist",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate unit_test_specialist evidence against the assigned paths and confirm the result addresses: writes meaningful unit tests."
+  },
+  "user_clarifier": {
+    "blocked_code": "BLOCKED_USER_CLARIFIER_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [],
+    "description": "asks targeted questions when a request is ambiguous",
+    "example": "For a Veyra website request, User Clarifier Agent uses workspace.read to asks targeted questions when a request is ambiguous for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "User Clarifier Agent",
+    "permissions": [
+      "read-workspace"
+    ],
+    "team": "planning",
+    "tools": [
+      "workspace.read"
+    ],
+    "validation": "Validate user_clarifier evidence against the assigned paths and confirm the result addresses: asks targeted questions when a request is ambiguous."
+  },
+  "vector_database_agent": {
+    "blocked_code": "BLOCKED_VECTOR_DATABASE_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "integrates a vector database only when required",
+    "example": "For a Veyra website request, Vector Database Agent uses workspace.read to integrates a vector database only when required for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Vector Database Agent",
+    "permissions": [
+      "read-workspace",
+      "database-inspect"
+    ],
+    "team": "data",
+    "tools": [
+      "workspace.read",
+      "database.inspect"
+    ],
+    "validation": "Validate vector_database_agent evidence against the assigned paths and confirm the result addresses: integrates a vector database only when required."
+  },
+  "web_vitals_agent": {
+    "blocked_code": "BLOCKED_WEB_VITALS_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "improves loading speed and Core Web Vitals",
+    "example": "For a Veyra website request, Web Vitals Agent uses workspace.read to improves loading speed and Core Web Vitals for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "Web Vitals Agent",
+    "permissions": [
+      "read-workspace",
+      "terminal-check",
+      "browser-test"
+    ],
+    "team": "quality",
+    "tools": [
+      "workspace.read",
+      "terminal.check",
+      "browser.test"
+    ],
+    "validation": "Validate web_vitals_agent evidence against the assigned paths and confirm the result addresses: improves loading speed and Core Web Vitals."
+  },
+  "websockets_agent": {
+    "blocked_code": "BLOCKED_WEBSOCKETS_AGENT_ADAPTER_OR_SCOPE_MISSING",
+    "dependencies": [
+      "intent_verifier"
+    ],
+    "description": "implements realtime updates and reconnection",
+    "example": "For a Veyra website request, WebSockets Agent uses workspace.read to implements realtime updates and reconnection for the requested page, records role-specific evidence, and stops before any unapproved external or destructive action.",
+    "name": "WebSockets Agent",
+    "permissions": [
+      "read-workspace",
+      "workspace-write",
+      "database-inspect"
+    ],
+    "team": "backend",
+    "tools": [
+      "workspace.read",
+      "workspace.write",
+      "database.inspect"
+    ],
+    "validation": "Validate websockets_agent evidence against the assigned paths and confirm the result addresses: implements realtime updates and reconnection."
+  }
+}

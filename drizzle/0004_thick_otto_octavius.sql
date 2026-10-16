@@ -1,0 +1,1 @@
+ALTER TABLE `projects` ADD `buildStatus` enum('idle','planned','writing','previewing','testing','verifying','succeeded','failed','blocked','timed_out','cancelled') DEFAULT 'idle' NOT NULL;

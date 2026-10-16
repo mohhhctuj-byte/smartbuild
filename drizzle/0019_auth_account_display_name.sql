@@ -1,0 +1,1 @@
+ALTER TABLE `authAccounts` ADD `displayName` varchar(160);

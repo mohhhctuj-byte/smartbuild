@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: smartbuild
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: LOCAL_AI_ENABLED
+        value: "false"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEYS
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash-lite
+      - key: GEMINI_MODELS
+        value: gemini-2.5-flash-lite,gemini-2.5-flash,gemini-3.1-flash-lite,gemini-3.1-flash-lite-preview
+      - key: JWT_SECRET
+        sync: false
+      - key: FIRST_PARTY_OWNER_EMAIL
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: EMAIL_FROM_NAME
+        value: SmartBuild

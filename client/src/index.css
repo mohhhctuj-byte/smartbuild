@@ -1,0 +1,1070 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: #03070D; color: #EEF7FF; font-family: var(--font-sans); transition: background-color 220ms var(--ease-out), color 180ms var(--ease-out); }
+#root > main:not(.auth-shell) { height: 100vh; overflow: hidden; }
+#root > main > div { height: 100%; }
+#root > main > div > div { min-height: 0; overflow: hidden; }
+#root > main:not(.auth-shell) > div > div > div.flex.min-w-0.flex-1.flex-col { min-height: 0; overflow: hidden; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+::selection { background: var(--selection-bg); color: var(--selection-text); }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { border-radius: 999px; background: #17304D; }
+::-webkit-scrollbar-track { background: transparent; }
+
+:root { --ease-out: cubic-bezier(0.23, 1, 0.32, 1); }
+
+.smartbuild-app {
+  --bg-app: #03070D;
+  --bg-sidebar: #050B13;
+  --bg-header: #070D16;
+  --bg-surface: #07111E;
+  --bg-surface-elevated: #0C1828;
+  --bg-surface-hover: #102238;
+  --bg-input: #06101A;
+  --bg-input-focus: #0A1B2D;
+  --border-subtle: #17304D;
+  --border-default: #23476D;
+  --border-strong: #386993;
+  --text-primary: #EEF7FF;
+  --text-secondary: #A8BED3;
+  --text-muted: #70879F;
+  --text-disabled: #4D647C;
+  --accent-primary: #8EDBFF;
+  --accent-primary-hover: #C6F0FF;
+  --accent-primary-active: #50C6F3;
+  --accent-soft: #0D2A42;
+  --accent-border: #3B729D;
+  --accent-focus-ring: #8EDBFF;
+  --button-primary-bg: #1C5B80;
+  --button-primary-hover: #26759F;
+  --button-primary-active: #164A6B;
+  --button-primary-text: #F0F9FF;
+  --button-secondary-bg: #0D1B2B;
+  --button-secondary-hover: #142941;
+  --button-secondary-active: #1A3551;
+  --button-secondary-text: #CBE8FF;
+  --button-secondary-border: #23476D;
+  --selection-bg: #174A70;
+  --selection-text: #EEF7FF;
+  --success: #34D399;
+  --success-soft: #102B25;
+  --warning: #FBBF24;
+  --warning-soft: #30250C;
+  --error: #F87171;
+  --error-soft: #32171A;
+  --info: #A8BED3;
+  background: var(--bg-app) !important;
+}
+html.dark .smartbuild-app { color-scheme: dark; }
+.smartbuild-app .smartbuild-sidebar {
+  background: #000000 !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: 18px 0 50px var(--bg-app);
+}
+.smartbuild-app .smartbuild-sidebar .text-sm,
+.smartbuild-app .smartbuild-sidebar .text-xs,
+.smartbuild-app .smartbuild-sidebar > div > span {
+  font-weight: 700 !important;
+  color: #E8F6FF !important;
+}
+.smartbuild-app .smartbuild-sidebar > div > span {
+  font-size: 1rem !important;
+}
+.smartbuild-app .smartbuild-header {
+  background: var(--bg-header) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: 0 1px 0 var(--border-subtle);
+}
+.smartbuild-app .smartbuild-chat {
+  background: #000000;
+}
+html.dark .smartbuild-app > div,
+html.dark .smartbuild-app > div > div,
+html.dark .smartbuild-app .smartbuild-chat,
+html.dark .smartbuild-app .smartbuild-sidebar,
+html.dark .smartbuild-app .smartbuild-header {
+  background-color: #03070D !important;
+}
+html.dark .smartbuild-app .smartbuild-chat,
+html.dark .smartbuild-app .smartbuild-chat > div:first-child,
+html.dark .smartbuild-app .smartbuild-entrance,
+html.dark .smartbuild-app .smartbuild-composer-wrap {
+  background: #000000 !important;
+}
+html.dark .smartbuild-app [class*="bg-white/"] {
+  background: #03070D !important;
+}
+html.dark .smartbuild-app .smartbuild-entrance {
+  border-color: #17304D !important;
+}
+html.dark .smartbuild-app .smartbuild-prompt,
+html.dark .smartbuild-app .smartbuild-composer {
+  background: #07111E !important;
+  border-color: #17304D !important;
+}
+html.dark .smartbuild-app .smartbuild-message:not(.ml-auto) {
+  background: #07111E !important;
+}
+html.dark .smartbuild-app .smartbuild-chat article.ml-auto {
+  background: #0D2A42 !important;
+}
+html.dark .smartbuild-app [class*="bg-[#2b3037]"] {
+  background: #12314C !important;
+}
+html.dark .smartbuild-app .smartbuild-prompt:hover,
+html.dark .smartbuild-app [class*="bg-[#2b3037]"]:hover,
+html.dark .smartbuild-app [class*="bg-[#343b45]"]:hover {
+  background: #102238 !important;
+}
+.smartbuild-app .smartbuild-entrance {
+  width: 100%;
+  padding: 32px;
+  border: 0 !important;
+  border-radius: 16px;
+  background: var(--bg-app);
+  box-shadow: none !important;
+}
+.smartbuild-app .smartbuild-entrance > .mb-4 {
+  background: var(--bg-surface-elevated) !important;
+  border-color: var(--border-default) !important;
+}
+.smartbuild-app .smartbuild-entrance h1 {
+  color: var(--text-primary) !important;
+}
+.smartbuild-app .smartbuild-entrance > p,
+.smartbuild-app .smartbuild-entrance > .mt-3 {
+  color: var(--text-secondary) !important;
+}
+.smartbuild-app .smartbuild-entrance > p.mt-3.max-w-2xl,
+.smartbuild-app [data-testid="pre-build-disclosure"] {
+  display: none !important;
+}
+.smartbuild-app .smartbuild-entrance > p.mb-3 {
+  display: none !important;
+}
+.smartbuild-app .smartbuild-chat > div:first-child > div:first-child > div {
+  display: none !important;
+}
+.smartbuild-app .smartbuild-composer-wrap {
+  background: var(--bg-app) !important;
+}
+.smartbuild-app .smartbuild-composer {
+  border-color: var(--border-subtle) !important;
+  background: var(--bg-surface) !important;
+  box-shadow: 0 20px 55px var(--bg-app) !important;
+}
+.smartbuild-app .smartbuild-composer-wrap {
+  position: relative;
+}
+.smartbuild-app .smartbuild-composer-wrap::before {
+  display: none;
+}
+.smartbuild-app .smartbuild-composer:focus-within {
+  border-color: var(--border-subtle) !important;
+  box-shadow: 0 20px 55px var(--bg-app) !important;
+}
+html.dark .smartbuild-app .smartbuild-composer {
+  background: #0A111A !important;
+  border-color: #1D1D1D !important;
+}
+html.dark .smartbuild-app .smartbuild-composer-controls {
+  background: #0A111A !important;
+}
+html.dark .smartbuild-app .smartbuild-attachment-button {
+  background: #0A111A !important;
+  color: #E8E8E8 !important;
+  font-weight: 800 !important;
+}
+html.dark .smartbuild-app .smartbuild-attachment-button svg {
+  stroke-width: 3 !important;
+}
+html.dark .smartbuild-app .smartbuild-attachment-menu {
+  background: #0A111A !important;
+  border-color: #282828 !important;
+}
+html.dark .smartbuild-app .smartbuild-attachment-menu button {
+  background: #0A111A !important;
+  color: #D8D8D8 !important;
+}
+html.dark .smartbuild-app .smartbuild-attachment-menu button:hover {
+  background: #151515 !important;
+  color: #FFFFFF !important;
+}
+html.dark .smartbuild-app .smartbuild-voice-button {
+  background: #000000 !important;
+  border-color: #303030 !important;
+  color: #B8B8B8 !important;
+}
+html.dark .smartbuild-app .smartbuild-voice-button:hover {
+  background: #101010 !important;
+  border-color: #4A4A4A !important;
+  color: #E0E0E0 !important;
+}
+.smartbuild-app textarea {
+  min-height: 40px;
+  line-height: 1.25;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  outline: none !important;
+  appearance: none;
+}
+
+.smartbuild-app textarea:focus,
+.smartbuild-app textarea:focus-visible {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.smartbuild-app .smartbuild-chat article {
+  border-radius: 16px !important;
+  border: 0 !important;
+  box-shadow: 0 8px 24px var(--bg-app);
+}
+.smartbuild-app .smartbuild-chat article .border,
+.smartbuild-app .smartbuild-chat article pre,
+.smartbuild-app .smartbuild-chat article code {
+  border-color: transparent !important;
+}
+.smartbuild-app .smartbuild-message:not(.ml-auto) {
+  background: var(--bg-surface) !important;
+}
+.smartbuild-app .smartbuild-user-message {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.smartbuild-app .smartbuild-assistant-message {
+  background: #0B2035 !important;
+  border: 1px solid #1D4B70 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24) !important;
+}
+.smartbuild-app .smartbuild-message:not(.ml-auto):hover {
+  border-color: var(--border-strong) !important;
+}
+.smartbuild-app .smartbuild-chat article.ml-auto {
+  background: var(--accent-soft) !important;
+  box-shadow: 0 8px 24px var(--bg-app);
+}
+.smartbuild-app .smartbuild-prompt {
+  min-height: 104px;
+  border-color: var(--border-subtle) !important;
+  background: var(--bg-app) !important;
+  box-shadow: 0 1px 0 var(--border-subtle);
+}
+.smartbuild-app .smartbuild-prompt:hover {
+  border-color: var(--border-strong) !important;
+  background: var(--bg-surface-hover) !important;
+  box-shadow: 0 12px 28px var(--bg-app);
+  transform: translateY(-1px);
+}
+.smartbuild-app .smartbuild-prompt span:last-child {
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft) !important;
+}
+.smartbuild-app button {
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out), transform 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+}
+.smartbuild-app button:active:not(:disabled) { transform: translateY(1px); }
+.smartbuild-app [role="listbox"] {
+  border-color: var(--border-default);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 18px 45px var(--bg-app);
+}
+.smartbuild-app [role="option"] { min-height: 34px; }
+.smartbuild-app [class*="border-cyan-"],
+.smartbuild-app [class*="focus-within:border-cyan-"] {
+  border-color: var(--border-default) !important;
+}
+.smartbuild-app [class*="text-cyan-"] { color: var(--accent-primary) !important; }
+.smartbuild-app [class*="bg-cyan-"] { background-color: var(--accent-soft) !important; }
+.smartbuild-app [class*="border-cyan-"] { border-color: var(--accent-border) !important; }
+.smartbuild-app [class*="bg-[#0b1220]"] { background-color: var(--bg-surface) !important; }
+.smartbuild-app [class*="bg-[#101a29]"] { background-color: var(--bg-surface-elevated) !important; }
+.smartbuild-app [class*="bg-[#121b2b]"] { background-color: var(--bg-surface-hover) !important; }
+.smartbuild-app [class*="bg-[#0d1521]"] { background-color: var(--bg-input) !important; }
+.smartbuild-app [class*="bg-[#090c12]"] { background-color: var(--bg-app) !important; }
+.smartbuild-app [class*="bg-[#7ed8ff]"] { background-color: #7ed8ff !important; }
+.smartbuild-app [class*="text-[#07131e]"] { color: #07131e !important; }
+.smartbuild-app button[data-testid="composer-send"] { background: #7ed8ff !important; color: #07131e !important; }
+.smartbuild-app button[data-testid="composer-send"] svg { color: #07131e !important; }
+.smartbuild-app button[data-testid="composer-send"]:hover { background: #9fe6ff !important; }
+.smartbuild-app [class*="hover:bg-[#7ed8ff]"]:hover { background-color: #9fe6ff !important; }
+.smartbuild-app [class*="active:bg-[#7ed8ff]"]:active { background-color: #7ed8ff !important; }
+.smartbuild-app span[style*="192, 132, 252"],
+.smartbuild-app span[style*="125, 211, 252"] {
+  background-color: var(--accent-primary) !important;
+  box-shadow: none !important;
+}
+.smartbuild-app button:disabled { background-color: var(--border-default); color: var(--text-muted); }
+.smartbuild-app .smartbuild-sidebar .text-slate-400,
+.smartbuild-app .smartbuild-sidebar .text-slate-500,
+.smartbuild-app .smartbuild-sidebar .text-slate-600 { color: var(--text-secondary) !important; }
+.smartbuild-app .smartbuild-sidebar .text-slate-600 { color: var(--text-muted) !important; }
+.smartbuild-app .smartbuild-sidebar button:hover { color: var(--text-primary) !important; }
+.smartbuild-app .smartbuild-sidebar svg { color: var(--text-secondary); opacity: 1; }
+.smartbuild-app .smartbuild-header svg,
+.smartbuild-app .smartbuild-composer svg { color: var(--text-secondary); opacity: 1; }
+.smartbuild-app .smartbuild-sidebar svg circle:last-child { fill: var(--bg-sidebar) !important; }
+.smartbuild-app svg[aria-label="SmartBuild"] {
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  background: var(--bg-app) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 999px; /* Circular shape */
+  opacity: 1 !important;
+  filter: none !important;
+  color: transparent !important; /* Make the default color transparent as we are explicitly coloring parts */
+}
+.smartbuild-app svg[aria-label="SmartBuild"] circle:first-child { stroke: var(--text-primary) !important; stroke-opacity: 1; fill: transparent !important; } /* Hexagon outline */
+.smartbuild-app svg[aria-label="SmartBuild"] path { stroke: var(--info) !important; } /* Arrow stroke */
+.smartbuild-app svg[aria-label="SmartBuild"] path:nth-of-type(2) { fill: var(--info) !important; } /* Arrow fill */
+.smartbuild-app svg[aria-label="SmartBuild"] circle:last-child { fill: transparent !important; } /* Inner circle fill */
+
+html:not(.dark) .smartbuild-app svg[aria-label="SmartBuild"] {
+  background: var(--bg-app) !important;
+  border-color: var(--border-subtle) !important;
+}
+html:not(.dark) .smartbuild-app svg[aria-label="SmartBuild"] circle:first-child { stroke: var(--text-primary) !important; }
+html:not(.dark) .smartbuild-app svg[aria-label="SmartBuild"] path { stroke: var(--info) !important; }
+html:not(.dark) .smartbuild-app svg[aria-label="SmartBuild"] path:nth-of-type(2) { fill: var(--info) !important; }
+html:not(.dark) .smartbuild-app svg[aria-label="SmartBuild"] circle:last-child { fill: transparent !important; }
+
+.smartbuild-app .text-slate-500 { color: var(--text-muted) !important; }
+.smartbuild-app .text-slate-400 { color: var(--text-secondary) !important; }
+.smartbuild-app .text-slate-300,
+.smartbuild-app .text-slate-200 { color: var(--text-primary) !important; }
+.smartbuild-app .opacity-50 { opacity: .72; }
+.smartbuild-app .opacity-60 { opacity: .82; }
+.smartbuild-app input,
+.smartbuild-app textarea { background-color: var(--bg-input); border-color: var(--border-subtle); color: var(--text-primary); }
+.smartbuild-app input::placeholder,
+.smartbuild-app textarea::placeholder { color: var(--text-muted); }
+.smartbuild-app input:focus,
+.smartbuild-app textarea:focus { outline: none !important; box-shadow: none !important; }
+.smartbuild-app button:focus-visible { outline: 2px solid var(--accent-focus-ring); outline-offset: 2px; }
+.smartbuild-app [role="option"][aria-selected="true"] { background: var(--accent-soft); color: var(--text-primary); }
+.smartbuild-app [role="option"][aria-selected="true"] svg { color: var(--accent-primary); }
+
+html:not(.dark) .smartbuild-app {
+  --bg-app: #F7F5FA;
+  --bg-sidebar: #F0F0F2;
+  --bg-header: #FAFAFB;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-hover: #F1F1F3;
+  --bg-input: #FFFFFF;
+  --bg-input-focus: #FBF7FF;
+  --border-subtle: #E5E5E8;
+  --border-default: #D2D2D7;
+  --border-strong: #B5B5BC;
+  --text-primary: #211A2B;
+  --text-secondary: #5F5F68;
+  --text-muted: #85858D;
+  --text-disabled: #ADADB4;
+  --accent-primary: #177FA8;
+  --accent-primary-hover: #116B90;
+  --accent-primary-active: #0F5D7C;
+  --accent-soft: #E7F5FB;
+  --accent-border: #97CBE0;
+  --accent-focus-ring: #4DA5C9;
+  --button-primary-bg: #146989;
+  --button-primary-hover: #105A78;
+  --button-primary-active: #0D4A64;
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: #FFFFFF;
+  --button-secondary-hover: #E8F5FA;
+  --button-secondary-active: #D9EEF7;
+  --button-secondary-text: #45454D;
+  --button-secondary-border: #D2D2D7;
+  --selection-bg: #E2E2E5;
+  --selection-text: #211A2B;
+}
+
+@media (max-width: 639px) {
+  .smartbuild-app .smartbuild-composer-wrap { padding-left: 12px !important; padding-right: 12px !important; }
+  .smartbuild-app .smartbuild-composer { border-radius: 18px !important; }
+  .smartbuild-app .smartbuild-chat article { max-width: 96% !important; }
+  .smartbuild-app .smartbuild-entrance { padding: 24px 16px; }
+}
+
+.smartbuild-tools-rail {
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .smartbuild-tools-rail {
+    transition: transform 220ms var(--ease-out), opacity 180ms var(--ease-out);
+  }
+}
+
+.smartbuild-tools-rail[data-state="closed"] {
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.smartbuild-code-panel { will-change: transform, opacity; }
+@media (prefers-reduced-motion: no-preference) {
+  .smartbuild-code-panel { transition: transform 220ms var(--ease-out), opacity 180ms var(--ease-out); }
+}
+.smartbuild-code-panel[data-state="closed"] {
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+@media (min-width: 1280px) {
+  #desktop-code-panel[data-state="open"] { display: flex !important; }
+}
+
+@keyframes smartbuild-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes smartbuild-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+.auth-shell { isolation: isolate; background: #0B0A10 !important; color: #F4F0FA !important; }
+.auth-shell > div:first-child { background: transparent !important; }
+.auth-shell > div:first-child > div:last-child { background: transparent !important; }
+.auth-grid { opacity: 0 !important; background: transparent !important; }
+.auth-card { box-shadow: none !important; }
+.auth-orb { display: none !important; }
+
+.auth-shell [class*="text-cyan-"],
+.auth-shell [class*="text-violet-"],
+.auth-shell [class*="text-blue-"],
+.auth-shell [class*="text-sky-"],
+.auth-shell [class*="text-indigo-"] { color: #F4F0FA !important; }
+
+.auth-shell [class*="bg-cyan-"],
+.auth-shell [class*="bg-violet-"],
+.auth-shell [class*="bg-blue-"],
+.auth-shell [class*="bg-sky-"],
+.auth-shell [class*="bg-indigo-"],
+.auth-shell [class*="bg-white/"] { background-color: #12101A !important; }
+
+.auth-shell [class*="border-cyan-"],
+.auth-shell [class*="border-violet-"],
+.auth-shell [class*="border-blue-"],
+.auth-shell [class*="border-sky-"],
+.auth-shell [class*="border-indigo-"] { border-color: #282036 !important; }
+
+.auth-shell [class*="shadow-[0_0_38px_rgba(34,211,238,0.13)]"],
+.auth-shell [class*="shadow-[0_0_14px_3px_rgba(103,232,249,0.75)]"] { box-shadow: none !important; }
+
+.auth-shell span[class*="border-cyan-"],
+.auth-shell span[class*="border-violet-"] { border-color: #282036 !important; }
+
+.auth-shell span[class*="bg-cyan-"] {
+  background-color: #D7D7DC !important;
+  box-shadow: none !important;
+}
+
+.auth-shell span[class*="rounded-2xl"][class*="border-cyan-"] {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: #111827 !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 4px 14px #0B0A10 !important;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.auth-shell span[class*="rounded-2xl"][class*="border-cyan-"] > span:nth-child(1) {
+  position: absolute !important;
+  width: 23px !important;
+  height: 23px !important;
+  border-radius: 5px !important;
+  border: 1.5px solid #B8C4D8 !important;
+  background: transparent !important;
+  transform: rotate(45deg) !important;
+  box-shadow: none !important;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%) !important;
+}
+
+.auth-shell span[class*="rounded-2xl"][class*="border-cyan-"] > span:nth-child(2) {
+  position: absolute !important;
+  width: 27px !important;
+  height: 1.5px !important;
+  border-radius: 2px !important;
+  background: #67D3C5 !important;
+  border: none !important;
+  transform: rotate(-32deg) !important;
+  box-shadow: none !important;
+  z-index: 2 !important;
+}
+
+.auth-shell span[class*="rounded-2xl"][class*="border-cyan-"] > span:nth-child(3) {
+  display: none !important;
+}
+
+.smartbuild-app svg[aria-label="SmartBuild"],
+.auth-shell svg[aria-label="SmartBuild"] {
+  width: 36px !important;
+  height: 36px !important;
+  padding: 5px !important;
+  border-radius: 50% !important;
+  background: #111827 !important;
+  border: 1px solid #334155 !important;
+  box-shadow: 0 4px 12px #0B0A10 !important;
+}
+
+.smartbuild-app svg[aria-label="SmartBuild"] circle:first-child,
+.auth-shell svg[aria-label="SmartBuild"] circle:first-child {
+  stroke: #B8C4D8 !important;
+  stroke-width: 1.8px !important;
+  stroke-opacity: 0.9 !important;
+  fill: transparent !important;
+}
+
+.smartbuild-app svg[aria-label="SmartBuild"] path,
+.auth-shell svg[aria-label="SmartBuild"] path {
+  stroke: #67D3C5 !important;
+  stroke-width: 2px !important;
+  stroke-linecap: round !important;
+}
+
+.smartbuild-app svg[aria-label="SmartBuild"] path:nth-of-type(2),
+.auth-shell svg[aria-label="SmartBuild"] path:nth-of-type(2) {
+  fill: none !important;
+  stroke: #67D3C5 !important;
+  stroke-width: 1.5px !important;
+}
+
+.smartbuild-app svg[aria-label="SmartBuild"] circle:last-child,
+.auth-shell svg[aria-label="SmartBuild"] circle:last-child {
+  fill: #0B0A10 !important;
+}
+
+
+.auth-shell [class*="text-white"],
+.auth-shell [class*="text-slate-100"],
+.auth-shell [class*="text-slate-200"],
+.auth-shell [class*="text-slate-300"],
+.auth-shell [class*="text-slate-400"],
+.auth-shell [class*="text-slate-500"],
+.auth-shell [class*="text-slate-600"] { color: #F4F0FA !important; }
+
+.auth-shell input {
+  background-color: #12101A !important;
+  border-color: #282036 !important;
+  color: #F4F0FA !important;
+}
+
+.auth-shell input::placeholder { color: rgba(83, 100, 127, 0.34) !important; }
+.auth-shell button { border-color: transparent !important; }
+.auth-shell button.bg-gradient-to-r,
+.auth-shell button[type="submit"] {
+  background: #D7D7DC !important;
+}
+
+.auth-shell button[class*="text-cyan-"] { color: #D7D7DC !important; }
+.auth-shell button[class*="text-slate-400"] { color: #B9AEC9 !important; }
+
+html .auth-shell input:not(:placeholder-shown) {
+  color: #aebbd0 !important;
+  -webkit-text-fill-color: #aebbd0 !important;
+  font-weight: 500 !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .smartbuild-entrance { animation: smartbuild-enter 240ms var(--ease-out) both; }
+  .smartbuild-entrance-delay-1 { animation: smartbuild-enter 240ms 18ms var(--ease-out) both; }
+  .smartbuild-entrance-delay-2 { animation: smartbuild-enter 240ms 32ms var(--ease-out) both; }
+  .smartbuild-entrance-delay-3 { animation: smartbuild-enter 240ms 48ms var(--ease-out) both; }
+  .smartbuild-float { animation: smartbuild-float 4s ease-in-out infinite; }
+  .smartbuild-loading { animation: smartbuild-enter 150ms var(--ease-out) both; }
+  .smartbuild-composer { transition: border-color 120ms var(--ease-out), box-shadow 120ms var(--ease-out), background-color 150ms var(--ease-out); }
+  .auth-orb-cyan, .auth-orb-violet, .auth-orb-blue { animation: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Restore the blue atmospheric sign-in presentation. */
+.auth-shell {
+  background:
+    radial-gradient(circle at 8% 38%, rgba(24, 190, 220, 0.16), transparent 30%),
+    radial-gradient(circle at 91% 18%, rgba(117, 75, 220, 0.14), transparent 32%),
+    linear-gradient(115deg, #03121b 0%, #050a12 43%, #080713 100%) !important;
+  color: #f4f8ff !important;
+}
+.auth-shell > div:first-child { background: transparent !important; }
+.auth-grid {
+  opacity: 0.28 !important;
+  background-image:
+    linear-gradient(rgba(109, 202, 226, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 202, 226, 0.045) 1px, transparent 1px) !important;
+  background-size: 42px 42px !important;
+  mask-image: linear-gradient(90deg, #000, transparent 72%) !important;
+}
+.auth-orb { display: block !important; filter: blur(4px); }
+.auth-orb-cyan { background: rgba(34, 211, 238, 0.17) !important; }
+.auth-orb-violet { background: rgba(124, 92, 246, 0.14) !important; }
+.auth-orb-blue { background: rgba(41, 132, 246, 0.12) !important; }
+.auth-shell > div:first-child > div:last-child {
+  background: linear-gradient(110deg, rgba(3, 12, 20, 0.08), rgba(4, 8, 15, 0.68) 52%, rgba(6, 5, 18, 0.18)) !important;
+}
+.auth-card {
+  box-shadow: 0 28px 110px rgba(0, 0, 0, 0.55) !important;
+}
+.auth-shell section.auth-card {
+  background: rgba(13, 22, 41, 0.85) !important;
+  border-color: #1d2b42 !important;
+}
+.auth-shell input {
+  background-color: rgba(10, 18, 32, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.11) !important;
+  color: #aebbd0 !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  caret-color: #aebbd0 !important;
+  -webkit-text-fill-color: #aebbd0 !important;
+}
+.auth-shell input::placeholder {
+  color: rgba(83, 100, 127, 0.34) !important;
+  opacity: 1 !important;
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+}
+.auth-shell input:focus {
+  color: #aebbd0 !important;
+  -webkit-text-fill-color: #aebbd0 !important;
+}
+.auth-shell input:not(:placeholder-shown) {
+  color: #aebbd0 !important;
+  -webkit-text-fill-color: #aebbd0 !important;
+  font-weight: 500 !important;
+}
+.auth-shell input:-webkit-autofill,
+.auth-shell input:-webkit-autofill:hover,
+.auth-shell input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #aebbd0 !important;
+  -webkit-box-shadow: 0 0 0 1000px #0a1220 inset !important;
+  box-shadow: 0 0 0 1000px #0a1220 inset !important;
+  caret-color: #aebbd0 !important;
+}
+.auth-shell [class*="text-slate-300"] { color: rgba(203, 213, 225, 0.8) !important; }
+.auth-shell [class*="text-slate-400"] { color: #94a3b8 !important; }
+.auth-shell [class*="text-slate-500"] { color: #64748b !important; }
+.auth-shell [class*="text-cyan-100"] { color: rgba(207, 250, 254, 0.8) !important; }
+.auth-shell button.bg-gradient-to-r,
+.auth-shell button[type="submit"] {
+  background: linear-gradient(100deg, #8ee7f2, #a7dfff) !important;
+  background-image: linear-gradient(100deg, #8ee7f2, #a7dfff) !important;
+  box-shadow: 0 12px 28px rgba(63, 197, 226, 0.14) !important;
+  color: #07131e !important;
+}
+
+html:not(.dark) body { background: #F7F5FA; color: #211A2B; }
+html:not(.dark) #root > main { background: #F7F5FA; }
+html:not(.dark) aside,
+html:not(.dark) header,
+html:not(.dark) [class*="bg-[#0b0d12]"],
+html:not(.dark) [class*="bg-[#090b10]"],
+html:not(.dark) [class*="bg-[#080b11]"],
+html:not(.dark) [class*="bg-[#11141b]"],
+html:not(.dark) [class*="bg-[#121924]"],
+html:not(.dark) .smartbuild-composer { background-color: #FFFFFF !important; }
+html:not(.dark) [class*="border-white"] { border-color: #D8CBE3 !important; }
+html:not(.dark) [class*="text-white"],
+html:not(.dark) [class*="text-slate-100"],
+html:not(.dark) [class*="text-slate-200"],
+html:not(.dark) [class*="text-slate-300"] { color: #211A2B !important; }
+html:not(.dark) [class*="text-slate-400"] { color: #5E5269 !important; }
+html:not(.dark) [class*="text-slate-500"],
+html:not(.dark) [class*="text-slate-600"] { color: #81758F !important; }
+html:not(.dark) [class*="bg-white/"] { background-color: #F1ECF7 !important; }
+html:not(.dark) textarea { background-color: #FFFFFF !important; color: #211A2B !important; }
+html:not(.dark) .smartbuild-app {
+  background: #F7F5FA !important;
+  color: #211A2B !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar { background: #EFEBF5 !important; }
+html:not(.dark) .smartbuild-app .smartbuild-header { background: #FBFAFC !important; }
+html:not(.dark) .smartbuild-app .smartbuild-chat { background: #F7F5FA !important; }
+html:not(.dark) .smartbuild-app .smartbuild-composer-wrap { background: #F7F5FA !important; }
+html:not(.dark) .smartbuild-app .smartbuild-composer,
+html:not(.dark) .smartbuild-app .smartbuild-prompt,
+html:not(.dark) .smartbuild-app .smartbuild-message:not(.ml-auto) {
+  background: #FFFFFF !important;
+  border-color: #E9E1F0 !important;
+  color: #211A2B !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-prompt[class*="bg-white/"] {
+  background: #FFFFFF !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-prompt:hover {
+  background: #F1ECF7 !important;
+  border-color: #B9A5C9 !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-message.ml-auto {
+  background: #F0E8FF !important;
+  color: #211A2B !important;
+}
+html:not(.dark) .smartbuild-app [class*="bg-[#2b3037]"],
+html:not(.dark) .smartbuild-app [class*="bg-[#343b45]"] {
+  background: #4B3B58 !important;
+  color: #FFFFFF !important;
+}
+html:not(.dark) .smartbuild-app [class*="bg-[#121b2b]"] {
+  background: #F1ECF7 !important;
+}
+html:not(.dark) .smartbuild-app [class*="bg-white/"] {
+  background: #F1ECF7 !important;
+}
+html:not(.dark) .smartbuild-app button:disabled {
+  background: #D8CBE3 !important;
+  color: #81758F !important;
+  border-color: #D8CBE3 !important;
+}
+html:not(.dark) .smartbuild-app [class*="bg-[#2b3037]"],
+html:not(.dark) .smartbuild-app [class*="bg-[#343b45]"] {
+  background: #FFFFFF !important;
+  border: 1px solid #D8CBE3 !important;
+  color: #4B3B58 !important;
+}
+html:not(.dark) .smartbuild-app [class*="hover:bg-[#343b45]"]:hover {
+  background: #F1ECF7 !important;
+}
+html:not(.dark) .smartbuild-app [class*="shadow-[inset_0_0_0_1px"] {
+  box-shadow: none !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar .text-slate-600 {
+  color: #81758F !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar .text-slate-500,
+html:not(.dark) .smartbuild-app .smartbuild-sidebar .text-slate-400 {
+  color: #5E5269 !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar button:hover {
+  background: #F1ECF7 !important;
+}
+html:not(.dark) .smartbuild-app [class*="text-white"],
+html:not(.dark) .smartbuild-app [class*="text-slate-100"],
+html:not(.dark) .smartbuild-app [class*="text-slate-200"] {
+  color: #211A2B !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar [class*="text-white"] {
+  color: #211A2B !important;
+}
+
+html.dark .smartbuild-app .smartbuild-sidebar {
+  background: #05080D !important;
+}
+html.dark .smartbuild-app [class*="border-white"] {
+  border-color: #24313C !important;
+}
+html.dark .smartbuild-app [class*="shadow-[inset_0_0_0_1px"] {
+  box-shadow: inset 0 0 0 1px rgba(36, 49, 60, 0.82) !important;
+}
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-user-message.ml-auto {
+  width: fit-content !important;
+  max-width: min(72%, 42rem) !important;
+  background: linear-gradient(135deg, #27404c 0%, #1d313a 100%) !important;
+  background-color: #233a44 !important;
+  border: 1px solid rgba(116, 145, 158, 0.28) !important;
+  border-radius: 0.85rem 0.85rem 0.3rem 0.85rem !important;
+  box-shadow:
+    0 0 0 1px rgba(73, 97, 108, 0.2),
+    0 6px 18px rgba(0, 0, 0, 0.28) !important;
+  color: #f2f7f8 !important;
+  text-shadow: none;
+  padding: 0.55rem 0.8rem !important;
+}
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-assistant-message:not(.ml-auto) {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #d7e0e5 !important;
+  font-weight: 500 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  transform: translateX(-56px);
+  text-align: left !important;
+}
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-assistant-message:not(.ml-auto) p,
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-assistant-message:not(.ml-auto) li,
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-assistant-message:not(.ml-auto) strong {
+  color: #d7e0e5 !important;
+  font-weight: 500 !important;
+}
+html.dark .smartbuild-app .smartbuild-chat article.smartbuild-user-message.ml-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  transform: translateX(-8px);
+  text-align: right !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar .text-sm,
+html.dark .smartbuild-app .smartbuild-sidebar .text-xs,
+html.dark .smartbuild-app .smartbuild-sidebar > div > span {
+  font-weight: 700 !important;
+  color: #E8F6FF !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar > div {
+  background: #05080D !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#2b3037]"],
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#121b2b]"],
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-white/"],
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#11141b]"],
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-cyan-"] {
+  background: #05080D !important;
+  background-color: #05080D !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="hover:bg-[#343b45]"]:hover,
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="hover:bg-white/"]:hover,
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="hover:bg-cyan-"]:hover {
+  background: #0A111A !important;
+  background-color: #05080D !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#11141b]"] span {
+  background: #05080D !important;
+  background-color: #05080D !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[aria-label="Use light appearance"] {
+  border-color: #222222 !important;
+  color: #B8B8B8 !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[aria-label="Use light appearance"]:hover {
+  border-color: #333333 !important;
+  background: #0A111A !important;
+}
+
+html.dark .smartbuild-app .smartbuild-chat,
+html.dark .smartbuild-app .smartbuild-chat > div:first-child,
+html.dark .smartbuild-app .smartbuild-chat > div:first-child > div,
+html.dark .smartbuild-app .smartbuild-composer-wrap {
+  background-color: #060A10 !important;
+  background-image: none !important;
+}
+html.dark .smartbuild-app .smartbuild-chat > div:first-child,
+html.dark .smartbuild-app .smartbuild-composer-wrap {
+  border-color: transparent !important;
+}
+html.dark .smartbuild-app .smartbuild-header {
+  background-color: #060A10 !important;
+  border-bottom-color: #1A2733 !important;
+  box-shadow: none !important;
+}
+html.dark .smartbuild-app {
+  font-family: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+html.dark .smartbuild-app .smartbuild-header p,
+html.dark .smartbuild-app .smartbuild-header a,
+html.dark .smartbuild-app .smartbuild-composer textarea,
+html.dark .smartbuild-app .smartbuild-composer input {
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+html.dark .smartbuild-app .smartbuild-entrance h1 {
+  color: #F2F2F2 !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.02em !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar .text-sm,
+html.dark .smartbuild-app .smartbuild-sidebar .text-xs,
+html.dark .smartbuild-app .smartbuild-sidebar > div > span {
+  font-weight: 500 !important;
+}
+html.dark .smartbuild-app .smartbuild-chat,
+html.dark .smartbuild-app .smartbuild-composer-wrap,
+html.dark .smartbuild-app .smartbuild-composer {
+  border-color: #1A2733 !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar {
+  border-right-color: #1A2733 !important;
+}
+html.dark .smartbuild-app .smartbuild-header svg,
+html.dark .smartbuild-app .smartbuild-header a[href*="export"],
+html.dark .smartbuild-app .smartbuild-header a[href*="export"] svg {
+  color: #A9BBC8 !important;
+  stroke: #A9BBC8 !important;
+}
+html.dark .smartbuild-app .smartbuild-header a[href*="export"] {
+  border-color: #2A3B49 !important;
+}
+html.dark .smartbuild-app .smartbuild-composer textarea::placeholder {
+  color: #718493 !important;
+  opacity: 1 !important;
+}
+html.dark .smartbuild-app .smartbuild-composer textarea,
+.smartbuild-app .smartbuild-composer textarea {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html.dark .smartbuild-app .smartbuild-composer textarea::-webkit-scrollbar,
+.smartbuild-app .smartbuild-composer textarea::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+html.dark .smartbuild-app .smartbuild-composer textarea::-webkit-scrollbar-thumb,
+html.dark .smartbuild-app .smartbuild-composer textarea::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+html.dark .smartbuild-app .smartbuild-chat::-webkit-scrollbar-thumb,
+html.dark .smartbuild-app .smartbuild-chat > div:first-child::-webkit-scrollbar-thumb {
+  background: #000000 !important;
+}
+html.dark .smartbuild-app .smartbuild-chat::-webkit-scrollbar-track,
+html.dark .smartbuild-app .smartbuild-chat > div:first-child::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+
+.auth-grid {
+  opacity: 0 !important;
+  background-image: none !important;
+}
+.auth-shell {
+  scrollbar-color: #000000 #000000;
+}
+.auth-shell::-webkit-scrollbar-thumb,
+.auth-shell::-webkit-scrollbar-track {
+  background: #000000 !important;
+}
+.auth-shell nav[aria-label="Authentication actions"] button:first-child {
+  color: #9fe7f3 !important;
+  -webkit-text-fill-color: #9fe7f3 !important;
+}
+.auth-shell nav[aria-label="Authentication actions"] button:first-child:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.auth-shell nav[aria-label="Authentication actions"] button:first-child:focus-visible {
+  outline: 2px solid #9fe7f3;
+  outline-offset: 4px;
+}
+
+.auth-shell header > p:first-child {
+  color: #9fe7f3 !important;
+  -webkit-text-fill-color: #9fe7f3 !important;
+}
+.auth-shell header h1,
+.auth-shell label {
+  color: #f4f8ff !important;
+}
+html .auth-shell header > p:last-child {
+  color: #bdc9d8 !important;
+  -webkit-text-fill-color: #bdc9d8 !important;
+}
+html .auth-shell label > span[class*="text-slate-500"] {
+  color: #aebbd0 !important;
+  -webkit-text-fill-color: #aebbd0 !important;
+}
+.auth-shell label svg[class*="text-slate-500"],
+.auth-shell label div > span[class*="text-slate-500"] {
+  color: #aebbd0 !important;
+  stroke: #aebbd0 !important;
+}
+.auth-shell input::placeholder {
+  color: #94a3b8 !important;
+  -webkit-text-fill-color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+html .auth-shell input,
+html .auth-shell input:not(:placeholder-shown) {
+  color: #eef6ff !important;
+  -webkit-text-fill-color: #eef6ff !important;
+  caret-color: #9fe7f3 !important;
+}
+html .auth-shell input:-webkit-autofill,
+html .auth-shell input:-webkit-autofill:hover,
+html .auth-shell input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #eef6ff !important;
+  caret-color: #9fe7f3 !important;
+}
+
+.smartbuild-app .smartbuild-composer:focus-within {
+  border-color: rgba(142, 219, 255, 0.7) !important;
+  box-shadow: 0 0 0 1px rgba(142, 219, 255, 0.16), 0 0 28px rgba(80, 198, 243, 0.1), 0 20px 55px rgba(0, 0, 0, 0.26) !important;
+}
+.smartbuild-app .smartbuild-composer {
+  border-color: rgba(142, 219, 255, 0.28) !important;
+  box-shadow: 0 0 18px rgba(80, 198, 243, 0.055), 0 20px 55px rgba(0, 0, 0, 0.26) !important;
+}
+.smartbuild-app .smartbuild-chat article.smartbuild-user-message.ml-auto {
+  background: linear-gradient(135deg, #153b55 0%, #102a3e 100%) !important;
+  border: 1px solid rgba(142, 219, 255, 0.38) !important;
+  box-shadow: 0 0 0 1px rgba(80, 198, 243, 0.1), 0 8px 24px rgba(0, 0, 0, 0.28) !important;
+}
+.smartbuild-app button[data-testid="composer-send"] {
+  background: #8EDBFF !important;
+  box-shadow: 0 3px 12px rgba(80, 198, 243, 0.16), inset 0 0 0 1px rgba(7, 19, 30, 0.12) !important;
+  transition: background-color 160ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 160ms var(--ease-out) !important;
+}
+.smartbuild-app button[data-testid="composer-send"]:hover:not(:disabled) {
+  background: #C6F0FF !important;
+  box-shadow: 0 4px 20px rgba(80, 198, 243, 0.3), inset 0 0 0 1px rgba(7, 19, 30, 0.1) !important;
+  transform: translateY(-1px);
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#2b3037]"] {
+  border: 1px solid rgba(142, 219, 255, 0.3) !important;
+  background: linear-gradient(110deg, #194865, #10283b) !important;
+  box-shadow: inset 0 1px 0 rgba(198, 240, 255, 0.11), 0 5px 20px rgba(43, 145, 194, 0.1) !important;
+  color: #DDF5FF !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#2b3037]"]:hover {
+  border-color: rgba(142, 219, 255, 0.32);
+  background: linear-gradient(110deg, rgba(31, 88, 120, 0.72), rgba(17, 38, 58, 0.96)) !important;
+  box-shadow: 0 6px 20px rgba(43, 145, 194, 0.1), inset 0 1px 0 rgba(198, 240, 255, 0.1);
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#121b2b]"] {
+  border: 1px solid rgba(142, 219, 255, 0.46) !important;
+  background: linear-gradient(105deg, #16445f, #0d2234) !important;
+  box-shadow: inset 0 0 22px rgba(80, 198, 243, 0.1), 0 5px 22px rgba(20, 101, 143, 0.12) !important;
+}
+html.dark .smartbuild-app .smartbuild-sidebar button[class*="bg-[#121b2b]"]::after {
+  width: 5px;
+  height: 5px;
+  margin-left: auto;
+  border-radius: 999px;
+  background: #8EDBFF;
+  box-shadow: 0 0 9px rgba(142, 219, 255, 0.72);
+  content: "";
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar button[class*="bg-[#2b3037]"] {
+  border: 1px solid #A6D9ED !important;
+  background: linear-gradient(110deg, #DFF4FC, #F1FAFE) !important;
+  box-shadow: inset 0 1px 0 #FFFFFF, 0 4px 16px rgba(39, 132, 170, 0.1) !important;
+  color: #123E55 !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar button[class*="bg-[#2b3037]"]:hover {
+  border-color: #91CDE4;
+  background: #DDF3FC !important;
+  box-shadow: 0 5px 18px rgba(39, 132, 170, 0.12);
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar button[class*="bg-[#121b2b]"] {
+  border: 1px solid #9BCFE3 !important;
+  background: linear-gradient(105deg, #DCEFF7, #EDF8FC) !important;
+  box-shadow: inset 0 0 16px rgba(76, 165, 201, 0.1), 0 3px 12px rgba(39, 132, 170, 0.08) !important;
+}
+html:not(.dark) .smartbuild-app .smartbuild-sidebar button[class*="bg-[#121b2b]"]::after {
+  width: 5px;
+  height: 5px;
+  margin-left: auto;
+  border-radius: 999px;
+  background: #4DA5C9;
+  box-shadow: 0 0 7px rgba(77, 165, 201, 0.4);
+  content: "";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smartbuild-app button[data-testid="composer-send"] {
+    transition: none !important;
+  }
+}
